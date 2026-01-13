@@ -1,76 +1,76 @@
-# ✈️ Proyecto de Análisis de Datos: Predicción de Precios en Aerolíneas
+# ✈️ Data Analysis Project: Airline Price Prediction
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
-![Status](https://img.shields.io/badge/Status-Finalizado-success)
+![Status](https://img.shields.io/badge/Status-Finished-success)
 ![Data Science](https://img.shields.io/badge/Area-Data%20Science-orange)
 
-## 📋 Descripción del Proyecto
-Este proyecto consiste en un análisis estadístico exhaustivo y modelado predictivo sobre el comportamiento de precios en el servicio de transporte aéreo. Utilizando técnicas de **Regresión Lineal Múltiple** en Python, se identificaron las variables clave que determinan el costo de un boleto y se validaron supuestos estadísticos rigurosos.
+## 📋 Project Description
+This project involves a comprehensive statistical analysis and predictive modeling of pricing behaviors in the air travel industry. Using **Multiple Linear Regression** techniques in Python, key variables determining ticket costs were identified, and rigorous statistical assumptions were validated.
 
-El objetivo principal fue construir un modelo matemático capaz de predecir el precio de venta y entender el comportamiento del consumidor.
+The primary objective was to build a mathematical model capable of predicting sales prices and understanding consumer behavior.
 
-## 🛠️ Tecnologías Utilizadas
-* **Python**: Lenguaje principal.
-* **Pandas & NumPy**: Manipulación y limpieza de datos.
-* **Statsmodels**: Modelado estadístico y pruebas de hipótesis (OLS).
-* **Matplotlib & Seaborn**: Visualización de datos y diagnóstico de residuales.
-
----
-
-## 📊 Hallazgos Clave: Comportamiento del Mercado
-Tras realizar un análisis descriptivo de los datos, se detectaron 5 patrones fundamentales:
-
-1.  **Dominio del Mercado Premium:** El **50% de las reservas** analizadas corresponden a *Primera Clase*, indicando una muestra con alta disposición a pagar.
-2.  **Alta Variabilidad de Precios:** El precio promedio es de **$376 USD**, con un rango oscilante entre $300 y $620 dependiendo de las condiciones de compra.
-3.  **Ventana de Compra:** Los usuarios compran con un promedio de **45 días de anticipación** (rango: 8 a 123 días).
-4.  **Cuota de Mercado:** **American Airlines** lidera la preferencia (30.6%), seguida de Southwest y United.
-5.  **Perfil del Viajero:** El 43.5% de los usuarios son viajeros "Casuales", mientras que los viajeros frecuentes representan una minoría.
+## 🛠️ Technologies Used
+* **Python**: Main programming language.
+* **Pandas & NumPy**: Data manipulation and cleaning.
+* **Statsmodels**: Statistical modeling and hypothesis testing (OLS).
+* **Matplotlib & Seaborn**: Data visualization and residual diagnostics.
 
 ---
 
-## 📈 Metodología y Modelado
+## 📊 Key Findings: Market Behavior
+After performing a descriptive analysis of the data, 5 fundamental patterns were detected:
 
-### 1. Análisis de Multicolinealidad (VIF)
-Se evaluó la redundancia entre variables mediante el *Variance Inflation Factor*.
-* **Alerta:** Se detectó multicolinealidad severa en la variable `Trips` (VIF > 14), lo que sugiere que está altamente correlacionada con el tipo de viajero.
+1.  **Premium Market Dominance:** **50% of the analyzed bookings** correspond to *First Class*, indicating a sample with a high willingness to pay.
+2.  **High Price Variability:** The average price is **$376 USD**, with a range oscillating between $300 and $620 depending on purchase conditions.
+3.  **Purchase Window:** Users purchase tickets with an average of **45 days in advance** (range: 8 to 123 days).
+4.  **Market Share:** **American Airlines** leads traveler preference (30.6%), followed by Southwest and United.
+5.  **Traveler Profile:** 43.5% of users are "Casual" travelers, while frequent flyers represent a minority.
 
-### 2. Ecuación del Modelo Matemático
-El modelo generado explica el **63.9% ($R^2$)** de la variación en los precios. La ecuación resultante es:
+---
+
+## 📈 Methodology & Modeling
+
+### 1. Multicollinearity Analysis (VIF)
+Redundancy between variables was evaluated using the *Variance Inflation Factor*.
+* **Alert:** Severe multicollinearity was detected in the `Trips` variable (VIF > 14), suggesting it is highly correlated with the traveler type.
+
+### 2. Mathematical Model Equation
+The generated model explains **63.9% ($R^2$)** of the variation in prices. The resulting equation is:
 
 $$
-Precio = 239.72 + 167.77(AA) + 143.81(Delta) + 176.75(United) - 0.40(Dias) + 84.35(FirstClass) - 33.69(Business)
+Price = 239.72 + 167.77(AA) + 143.81(Delta) + 176.75(United) - 0.40(Days) + 84.35(FirstClass) - 33.69(Business)
 $$
 
-**Interpretación:**
-* **Aerolíneas:** Volar con United o AA incrementa el precio base significativamente.
-* **Anticipación:** Se ahorra **$0.40 USD** por cada día extra de anticipación.
-* **Clase:** La *Primera Clase* aumenta el costo en **$84.35 USD** promedio.
+**Interpretation:**
+* **Airlines:** Flying with United or AA significantly increases the base price.
+* **Advance Purchase:** There is a saving of **$0.40 USD** for every extra day of advance purchase.
+* **Class:** Flying *First Class* increases the cost by an average of **$84.35 USD**.
 
 ---
 
-## 🧪 Validación de Supuestos Estadísticos
+## 🧪 Statistical Assumption Validation
 
-Para asegurar la robustez del modelo, se realizaron pruebas de diagnóstico visual y numérico:
+To ensure model robustness, visual and numerical diagnostic tests were performed:
 
-### A. Normalidad de los Errores
-> **Prueba Shapiro-Wilk:** p-value = 0.389 (Se acepta Normalidad).
+### A. Normality of Errors
+> **Shapiro-Wilk Test:** p-value = 0.389 (Normality Accepted).
 
-El histograma y el gráfico Q-Q confirman que los residuales siguen una distribución normal, validando las pruebas de hipótesis del modelo.
+The histogram and Q-Q plot confirm that the residuals follow a normal distribution, validating the model's hypothesis tests.
 
-![Gráfico de Normalidad](ruta/a/tu/imagen_histograma_qq.png)
-*(Asegúrate de subir tu imagen y poner la ruta correcta aquí)*
+![Normality Plot](path/to/your/histogram_qq_image.png)
+*(Make sure to upload your image and place the correct path here)*
 
-### B. Homocedasticidad (Varianza Constante)
-> **Prueba Breusch-Pagan:** p-value < 0.05 (Existe Heterocedasticidad).
+### B. Homoscedasticity (Constant Variance)
+> **Breusch-Pagan Test:** p-value < 0.05 (Heteroscedasticity Exists).
 
-Se observa cierta dispersión en forma de "embudo" en los precios más altos. Esto indica que el modelo es muy preciso para tarifas estándar, pero tiene mayor margen de error en boletos de muy alto costo.
+A slight "funnel" shape is observed in higher prices. This indicates that the model is highly accurate for standard fares but has a larger margin of error for very expensive tickets.
 
-![Gráfico de Residuales](ruta/a/tu/imagen_residuales.png)
+![Residuals Plot](path/to/your/residuals_image.png)
 
 ---
 
-## 🚀 Cómo ejecutar este proyecto
+## 🚀 How to Run This Project
 
-1. Clonar el repositorio:
+1. Clone the repository:
    ```bash
-   git clone [https://github.com/TU_USUARIO/TU_REPOSITORIO.git](https://github.com/TU_USUARIO/TU_REPOSITORIO.git)
+   git clone [https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git](https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git)
