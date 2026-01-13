@@ -70,15 +70,14 @@ To ensure model robustness, visual and numerical diagnostic tests were performed
 
 The histogram and Q-Q plot confirm that the residuals follow a normal distribution, validating the model's hypothesis tests.
 
-![Normality Plot](path/to/your/histogram_qq_image.png)
-*(Make sure to upload your image and place the correct path here)*
+![Normality Plot](/Normalidad.jpg)
 
 ### B. Homoscedasticity (Constant Variance)
 > **Breusch-Pagan Test:** p-value < 0.05 (Heteroscedasticity Exists).
 
 A slight "funnel" shape is observed in higher prices. This indicates that the model is highly accurate for standard fares but has a larger margin of error for very expensive tickets.
 
-![Residuals Plot](path/to/your/residuals_image.png)
+![Residuals Plot](residual.jpg)
 
 ---
 
