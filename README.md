@@ -69,8 +69,4 @@ A slight "funnel" shape is observed in higher prices. This indicates that the mo
 
 ---
 
-## 🚀 How to Run This Project
 
-1. Clone the repository:
-   ```bash
-   git clone [https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git](https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git)
