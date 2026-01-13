@@ -28,6 +28,19 @@ After performing a descriptive analysis of the data, 5 fundamental patterns were
 
 ---
 
+## 📂 Data Sample
+The analysis is based on a structured dataset containing flight details, purchasing behavior, and pricing. Below is a snippet of the raw data used for this study:
+
+| Airline | Origin | Destination | Fare Type | Days to Travel | Ticket Price (USD) | Trips (Freq) |
+| :--- | :---: | :---: | :--- | :---: | :---: | :---: |
+| **Delta** | DFW | GRB | Business | 47 | $409 | 5 |
+| **American** | DFW | SLC | Economy | 88 | $420 | 5 |
+| **United** | DFW | SLC | Economy | 31 | $440 | 5 |
+| **American** | DFW | SLC | First Class | 38 | $613 | 9 |
+| **Southwest** | DAL | ELP | First Class | 46 | $301 | 7 |
+
+*Table 1: Preview of the dataset showing key variables such as airline choice, route, class, and pricing.*
+
 ## 📈 Methodology & Modeling
 
 ### 1. Multicollinearity Analysis (VIF)
