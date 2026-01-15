@@ -65,14 +65,18 @@ $$
 
 To ensure model robustness, visual and numerical diagnostic tests were performed:
 
-### A. Normality of Errors
+## A. Waste distribution
+
+![Waste Distribution Plot](/distribucion.jpg)
+
+### B. Normality of Errors
 > **Shapiro-Wilk Test:** p-value = 0.389 (Normality Accepted).
 
 The histogram and Q-Q plot confirm that the residuals follow a normal distribution, validating the model's hypothesis tests.
 
 ![Normality Plot](/Normalidad.jpg)
 
-### B. Homoscedasticity (Constant Variance)
+### C. Homoscedasticity (Constant Variance)
 > **Breusch-Pagan Test:** p-value < 0.05 (Heteroscedasticity Exists).
 
 A slight "funnel" shape is observed in higher prices. This indicates that the model is highly accurate for standard fares but has a larger margin of error for very expensive tickets.
